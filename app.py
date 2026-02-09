@@ -37,7 +37,9 @@ if uploaded_file is not None:
     data = pd.read_csv(uploaded_file)
 
     # Convert target
+    if "y" in data.columns:
     data["target"] = data["y"].map({"yes": 1, "no": 0})
+
     data.drop("y", axis=1, inplace=True)
 
     # Encode categorical columns
