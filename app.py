@@ -38,7 +38,7 @@ if uploaded_file is not None:
 
     # Convert target
     if "y" in data.columns:
-    data["target"] = data["y"].map({"yes": 1, "no": 0})
+        data["target"] = data["y"].map({"yes": 1, "no": 0})
 
     data.drop("y", axis=1, inplace=True)
 
