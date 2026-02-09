@@ -34,7 +34,7 @@ model_map = {
 }
 
 if uploaded_file is not None:
-    data = pd.read_csv(uploaded_file, sep=";")
+    data = pd.read_csv(uploaded_file)
 
     # Convert target
     data["target"] = data["y"].map({"yes": 1, "no": 0})
